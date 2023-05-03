@@ -1,0 +1,24 @@
+.container-left{
+    float: left;
+    width: auto;
+    height: 500px;
+    background-color: #FFF;
+    border: solid 1px #a2a2a2
+}  
+
+.table-cronometro{
+    width: 140px;
+    height: 132px;
+}
+
+.cronometro{
+    background: url('imagens/cronometro.png');
+}
+
+.container-center{
+    float: left;
+    width: 600px;
+    height: 500px;
+    background: url('imagens/cenario.png');
+    background-position: bottom;
+}
