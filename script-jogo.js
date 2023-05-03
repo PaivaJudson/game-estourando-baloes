@@ -18,7 +18,7 @@ function iniciarJogo(){
         tempo_segundos = 60;
     }
     else if(nivel_jogo == 3){
-        tempo_segundos = 5;
+        tempo_segundos = 15;
     }
 
     document.getElementById('cronometro').innerHTML = tempo_segundos;
@@ -68,12 +68,28 @@ function estourar(e){
 
     var id_balao = e.id;
 
+    document.getElementById(id_balao).setAttribute("onclick", "");
     document.getElementById(id_balao).src = 'imagens/balao_azul_pequeno_estourado.png';
     pontuacao(-1);
 }
 
-function pontuacao(acao){
+function pontuacao(decremento){
 
-   var baloes_inteiros = document.getElementById('baloes_inteiros').innerHTML;
-   var baloes_estourados = document.getElementById('baloes_estourados').innerHTML;
+   var baloes_inteiros = parseInt(document.getElementById('baloes_inteiros').innerHTML);
+   var baloes_estourados = parseInt(document.getElementById('baloes_estourados').innerHTML);
+
+   baloes_inteiros = baloes_inteiros + decremento;
+   baloes_estourados = baloes_estourados + 1;
+
+   document.getElementById('baloes_inteiros').innerHTML = baloes_inteiros;
+   document.getElementById('baloes_estourados').innerHTML = baloes_estourados;
+
+   situacao_jogo(baloes_inteiros);
+}
+
+function situacao_jogo(baloes_inteiros){
+    if (baloes_inteiros == 0) {
+        alert("Parabéns você conseguiu!!")
+        clearTimeout(timerID);
+    }
 }
