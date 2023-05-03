@@ -30,3 +30,7 @@
     color: red;
     font-size: 30px;
 }
+
+#baloes_inteiros, #baloes_estourados{
+    font-size: 40px;
+}
