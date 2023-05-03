@@ -13,6 +13,9 @@
 
 .cronometro{
     background: url('imagens/cronometro.png');
+    text-align: center;
+    padding-left: 15px;
+    padding-top: 15px;
 }
 
 .container-center{
@@ -21,4 +24,9 @@
     height: 500px;
     background: url('imagens/cenario.png');
     background-position: bottom;
+}
+
+#cronometro{
+    color: red;
+    font-size: 30px;
 }
